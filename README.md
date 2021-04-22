@@ -5,7 +5,7 @@ Basic start APIs scaffold for SPAs applications.
 - Authentication with Laravel Sanctum
   - Contains login, register and logout endpoints
   - After register or login, it generates a bearer token that can be used for your subsequent SPA requests.
-- Authentication with personal roles middleware
+- Authorization with personal roles middleware
   - Can be applied in route just by adding ->middleware('role:role_name');
 - And more, just clone =D.
 
