@@ -43,7 +43,11 @@ jobs:
             php artisan key:generate
 
       - run:
-          name: "Create database and run migration"
+          name: "Create mysql database"
+          command: mysql  -h 127.0.0.1 -u root -e "create database projeto_tcc_db;"
+
+      - run:
+          name: "Run migration"
           command: |
             php artisan migrate --env=testing
 
