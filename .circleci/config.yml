@@ -17,7 +17,7 @@ jobs:
           command: |
             sudo apt update
             sudo docker-php-ext-install zip pdo pdo_mysql
-            sudo apt install -y mysql-client
+            sudo apt install -y default-mysql-client
 
       # Download and cache dependencies
       - restore_cache:
