@@ -16,7 +16,8 @@ jobs:
           name: "Prepare Environment"
           command: |
             sudo apt update
-            sudo docker-php-ext-install zip
+            sudo docker-php-ext-install zip pdo pdo_mysql
+            sudo apt install -y mysql-client
 
       # Download and cache dependencies
       - restore_cache:
