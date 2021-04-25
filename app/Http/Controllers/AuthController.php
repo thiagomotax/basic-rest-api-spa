@@ -69,12 +69,12 @@ class AuthController extends Controller
         $request->validate([
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
-            'remember' => ['required', 'boolean']
+            'remember' => ['boolean']
         ]);
 
         $credentials = request(['email', 'password']);
 
-        if(!Auth::attempt($credentials, $request->remember)){
+        if(!Auth::attempt($credentials, $request->remember == true)){
             return response()->json([
                 'message' => 'Unauthorized'
             ], 401);
